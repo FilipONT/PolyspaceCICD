@@ -1,0 +1,4 @@
+C:\Users\Filip\Desktop\PolyspaceDemo\Debug\SMCA.exe
+C:\Users\Filip\Documents\SMCA\Debug\SMCA.exe
+C:\Users\Filip\Documents\SmartHomeControl\SMCA\Debug\SMCA.exe
+C:\Users\Filip\Documents\Praca\SmartHomeControl\SMCA\Debug\SMCA.exe

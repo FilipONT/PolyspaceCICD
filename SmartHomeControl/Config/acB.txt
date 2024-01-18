@@ -1,0 +1,8 @@
+Id: 0002
+Name: Air conditioner B
+MinValue: 10
+MaxValue: 40
+Temp: 34
+TempStep: 1
+IsOn: 1
+IsFanOn: 1

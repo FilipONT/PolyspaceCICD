@@ -1,0 +1,6 @@
+Id: 0003
+Name: Light A
+MinValue: 1
+MaxValue: 1000
+LightIntensity: 600
+IsOn: 1

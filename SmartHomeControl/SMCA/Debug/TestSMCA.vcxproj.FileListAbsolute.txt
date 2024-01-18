@@ -1,0 +1,3 @@
+C:\Users\Filip\source\repos\TestSMCA\Debug\TestSMCA.exe
+Z:\VSprojects\TestSMCA\Debug\TestSMCA.exe
+C:\Users\Filip\Desktop\PolyspaceDemo\Debug\TestSMCA.exe
