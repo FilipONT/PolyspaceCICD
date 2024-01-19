@@ -55,7 +55,7 @@ void func_NTL() {
 void func_SLR() {
 	
 	int x = 1;
-	printf('x');
+//	printf(x);
 }
 
 int func_RNI(int x) {
