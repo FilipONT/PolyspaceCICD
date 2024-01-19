@@ -11,7 +11,7 @@ struct abcd {
 } abcd_struct;
 
 short func_overflowRed(short x){
-	int y = 2^30;
+	int y = 3;
 	return x + y;
 }
 
@@ -19,7 +19,7 @@ void func_BitShift(signed char x)
 {
 	x = 1;
 	x = x << 2;
-	x = x << 20;
+//	x = x << 20;
 }
 
 // void func_IDP_test() {
