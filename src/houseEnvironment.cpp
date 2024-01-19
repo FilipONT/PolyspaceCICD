@@ -6,7 +6,6 @@ extern AirConditioner acA;
 extern AirConditioner acB;
 extern Light lightA;
 extern Sensors sensors;
-extern FileModule fileModule;
 extern int a;
 
 
