@@ -64,9 +64,9 @@ CXX        = g++
 CXXFLAGS   = -g -c -Wall
 LDFLAGS    = -g
 LDLIBS     =
-OBJS       = ./src/*.o
-DEPS       = ./src/*.h
-EXECUTABLE = SHC_App
+OBJS       = main.o functions.o
+DEPS       = functions.h
+EXECUTABLE = PolyspaceCICD 
 
 .PHONY: all
 all: $(EXECUTABLE)
