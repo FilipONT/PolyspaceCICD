@@ -2,67 +2,67 @@
 #include "RedChecks.h"
 #include "OrangeChecks.h"
 
-// struct abcd {
-// 	char a;
-// 	char b;
-// 	int c;
-// 	int d;
-// } abcd_struct;
+struct abcd {
+	char a;
+	char b;
+	int c;
+	int d;
+} abcd_struct;
 
 short func_overflowRed(short x){
 	int y = 3;
 	return x + y;
 }
 
-// void func_BitShift(signed char x)
-// {
-// 	x = 1;
-// 	x = x << 2;
-// //	x = x << 20;
+void func_BitShift(signed char x)
+{
+	x = 1;
+	x = x << 2;
+//	x = x << 20;
+}
+
+// void func_IDP_test() {
+
+// 	int* y;
+// 	int x;
+// 	int z;
+	
+// 	abcd_struct.a = 1;
+// 	abcd_struct.b = 2;
+// 	abcd_struct.c = 3;
+// 	abcd_struct.d = 4;
+	
+// 	y = &abcd_struct.c;
+	
+// 	z = y[0];
+// 	z = y[1];
+// 	z = y[2];
+//  	z = y[3];
+	
+// 	x = *y;
+// 	x = *y++;
+// 	x = *y++;
+// 	x = *++y;
 // }
 
-// // void func_IDP_test() {
+void func_NTL() {
+	for (int i = 0; i == abcd_struct.c; i + 2)
+	{
+		//code
+	}
+}
 
-// // 	int* y;
-// // 	int x;
-// // 	int z;
+void func_SLR() {
 	
-// // 	abcd_struct.a = 1;
-// // 	abcd_struct.b = 2;
-// // 	abcd_struct.c = 3;
-// // 	abcd_struct.d = 4;
-	
-// // 	y = &abcd_struct.c;
-	
-// // 	z = y[0];
-// // 	z = y[1];
-// // 	z = y[2];
-// //  	z = y[3];
-	
-// // 	x = *y;
-// // 	x = *y++;
-// // 	x = *y++;
-// // 	x = *++y;
-// // }
+	int x = 1;
+//	printf(x);
+}
 
-// void func_NTL() {
-// 	for (int i = 0; i == abcd_struct.c; i + 2)
-// 	{
-// 		//code
-// 	}
-// }
+int func_RNI(int x) {
+	x = x+3;
+}
 
-// void func_SLR() {
-	
-// 	int x = 1;
-// //	printf(x);
-// }
-
-// int func_RNI(int x) {
-// 	x = x+3;
-// }
-
-// void func_DBZ(int x) {
-// 	int y = 0;
-// 	x = x/y;
-// }
+void func_DBZ(int x) {
+	int y = 0;
+	x = x/y;
+}

@@ -2,8 +2,68 @@
 #include "OrangeChecks.h"
 #include "RedChecks.h"
 
-short func_overflowOrange(int x) {
-	x = x + 123;
-	return x;
+struct abcd {
+	char a;
+	char b;
+	int c;
+	int d;
+} abcd_struct;
+
+short func_overflowRed(short x){
+	int y = 3;
+	return x + y;
+}
+
+void func_BitShift(signed char x)
+{
+	x = 1;
+	x = x << 2;
+//	x = x << 20;
+}
+
+// void func_IDP_test() {
+
+// 	int* y;
+// 	int x;
+// 	int z;
+	
+// 	abcd_struct.a = 1;
+// 	abcd_struct.b = 2;
+// 	abcd_struct.c = 3;
+// 	abcd_struct.d = 4;
+	
+// 	y = &abcd_struct.c;
+	
+// 	z = y[0];
+// 	z = y[1];
+// 	z = y[2];
+//  	z = y[3];
+	
+// 	x = *y;
+// 	x = *y++;
+// 	x = *y++;
+// 	x = *++y;
+// }
+
+void func_NTL() {
+	for (int i = 0; i == abcd_struct.c; i + 2)
+	{
+		//code
+	}
+}
+
+void func_SLR() {
+	
+	int x = 1;
+//	printf(x);
+}
+
+int func_RNI(int x) {
+	x = x+3;
+}
+
+void func_DBZ(int x) {
+	int y = 0;
+	x = x/y;
 }
 
