@@ -1,84 +1,44 @@
-# --------------------------------------------------------------------------- 
-#								INTRODUCTION
-# --------------------------------------------------------------------------- 
-# Makefiles are special format files that together with the make utility 
-# will help you to automagically build and manage your projects.
-#
-# A makefile consists of a set of rules. 
-# A rule consists of 3 parts: 
-# a target, a list of pre-requisites and a command, as follows:
-# target: pre-req-1 pre-req-2 ...
-#	command
-# --------------------------------------------------------------------------- 
-#								 VARIABLES (MACROS)
-# --------------------------------------------------------------------------- 
-# The syntax for accessing a make variable is $(VAR).
-# Make has a whole host of built in rules that mean that very often, 
-# a project can be compile by a very simple makefile, indeed.
-#
-# Traditional variables (Make Macros) Used By Implicit (Built-in) Rules:
-# CC       = the c compiler to use: gcc, clang, icc
-# CXX      = the c++ compiler to use: g++, clang++, icpc
-# CFLAGS   = compilation flags for c source files
-# CXXFLAGS = compilation flags for c++ source files
-# CPPFLAGS = flags for the c-preprocessor (typically include file paths 
-# and symbols defined on the command line), used by c and c++
-# LD       = the linker to use
-# LDFLAGS  = linker flags, i.e. -g, -O1, -O2, -O3 and so on. 
-# LDLIBS   = libraries to link, i.e. -lm, -lz, -pthread and so on.
-# --------------------------------------------------------------------------- 
-#								   PATTERN RULES
-# --------------------------------------------------------------------------- 
-# A pattern rule, which uses pattern matching character '%' as the filename, 
-# can be applied to create a target, if there is no explicit rule. 
-# Pattern rules are specified in a form like
-#
-# %.o: %.cpp 
-#    $(CCX) $(CFLAGS) $(CPPFLAGS) -c $<
-#
-# which means that object files are generated from c source files by running 
-# the command shown, where the "automatic" variable $< expands to the name 
-# of the first dependency.
-# --------------------------------------------------------------------------- 
-#								AUTOMATIC VARIABLES
-# --------------------------------------------------------------------------- 
-# "Automatic" variables are set by make after a rule is matched. 
-# There include:
-# $@: the target filename.
-# $*: the target filename without the file extension.
-# $<: the first prerequisite filename.
-# $^: the filenames of all the prerequisites, separated by spaces, 
-# discard duplicates.
-# $+: similar to $^, but includes duplicates.
-# $?: the names of all prerequisites that are newer than the target,
-# separated by spaces.
-# --------------------------------------------------------------------------- 
-#								      PHONY
-# --------------------------------------------------------------------------- 
-# Generally all targets in your Makefile which do not produce \ 
-# an output file with the same name as the target name should \
-# be PHONY. This typically includes all, install, clean, check. etc.
-# ---------------------------------------------------------------------------
+CC=gcc
+DEBUG=yes
+EXEC=program.exe
 
-CXX        = g++
-CXXFLAGS   = -g -c -Wall
-LDFLAGS    = -g
-LDLIBS     =
-OBJS       = math.o functions.o
-DEPS       = functions.h
-EXECUTABLE = math 
+# all c files in this directory
+SRC = $(wildcard *.c)
+# otherwise
+#SRC = $(wildcard src_dir1/*.c) \
+#      $(wildcard src_dir2/*.c)
 
-.PHONY: all
-all: $(EXECUTABLE)
-	@echo All done!
+# -g for debug
+# -Wall to get all the possible warnings
+# -ansi -pendantic to get portable code
+ifeq ($(DEBUG),yes)
+	CFLAGS=-W -Wall -ansi -pedantic -g -std=c99
+	LDFLAGS= -Wall -lm
+else
+	CFLAGS=-W -Wall -ansi -pedantic -std=c99 -O3
+	LDFLAGS= -Wall -lm
+endif
 
-$(EXECUTABLE): $(OBJS)
-	$(CXX) $(LDFLAGS) $^ -o $@ $(LDLIBS)
+###############################################
+# end of the configuration
+###############################################
 
-%.o: %.cpp $(DEPS)
-	$(CXX) $(CXXFLAGS) $<
+all: $(EXEC)
+
+obj = $(SRC:.c=.o)
+dep = $(obj:.o=.d)
+
+$(EXEC): $(obj)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+-include $(dep)
+
+%.d: %.c
+	@$(CC) $(CFLAGS) $< -MM -MT $(@:.d=.o) >$@
+
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 .PHONY: clean
-clean: 
-	rm -f $(OBJS) $(EXECUTABLE)
-	@echo Clean done!
+clean:
+	rm -f $(obj) $(EXEC) $(dep)

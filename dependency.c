@@ -1,5 +1,11 @@
-#include <iostream>
-#include "functions.h"
+#include <stdio.h>
+
+void func(signed char x)
+{
+	x = 1;
+	x = x << 2;
+	x = x << 21;
+}
 
 struct abcd {
 	char a;
@@ -8,36 +14,24 @@ struct abcd {
 	int d;
 } abcd_struct;
 
-short func_overflowRed(short x){
-	int y = 3;
-	return x + y;
-}
-
-void func_BitShift(signed char x)
-{
-	x = 1;
-	x = x << 2;
-	x = x << 20;
-}
-
 void func_IDP_test() {
 
 	int* y;
 	int x;
 	int z;
-	
+
 	abcd_struct.a = 1;
 	abcd_struct.b = 2;
 	abcd_struct.c = 3;
 	abcd_struct.d = 4;
-	
-	y = &abcd_struct.c;
-	
+
+	y = &abcd_struct;
+
 	z = y[0];
 	z = y[1];
 	z = y[2];
- 	z = y[3];
-	
+	// 	z = y[3];
+
 	x = *y;
 	x = *y++;
 	x = *y++;
@@ -52,17 +46,16 @@ void func_NTL() {
 }
 
 void func_SLR() {
-	
+
 	int x = 1;
 	printf(x);
 }
 
 int func_RNI(int x) {
-	x = x+3;
+	x = x + 3;
 }
 
 void func_DBZ(int x) {
 	int y = 0;
-	x = x/y;
+	x = x / y;
 }
-
