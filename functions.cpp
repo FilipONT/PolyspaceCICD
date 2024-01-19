@@ -23,7 +23,7 @@ void func_BitShift(signed char x)
 
 void func_IDP_test() {
 
-	int* y;
+	abcd* y;
 	int x;
 	int z;
 	
