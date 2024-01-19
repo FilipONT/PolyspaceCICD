@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	func_NTL();
 	func_SLR();
 	int b = func_RNI(3);
-	func_DBZ();
+	func_DBZ(8);
 	
 	return 0;
 } 
