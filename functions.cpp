@@ -32,7 +32,7 @@ void func_IDP_test() {
 	abcd_struct.c = 3;
 	abcd_struct.d = 4;
 	
-	y = &abcd_struct.a;
+	y = &abcd_struct.c;
 	
 	z = y[0];
 	z = y[1];
