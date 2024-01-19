@@ -1,7 +1,6 @@
 #include <iostream>
 #include "RedChecks.h"
 #include "OrangeChecks.h"
-#include <stdio.h>
 
 struct abcd {
 	char a;
