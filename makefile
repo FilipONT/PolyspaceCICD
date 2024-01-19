@@ -64,9 +64,9 @@ CXX        = g++
 CXXFLAGS   = -g -c -Wall
 LDFLAGS    = -g
 LDLIBS     =
-OBJS       = main.o functions.o
+OBJS       = math.o functions.o
 DEPS       = functions.h
-EXECUTABLE = PolyspaceCICD 
+EXECUTABLE = math 
 
 .PHONY: all
 all: $(EXECUTABLE)
