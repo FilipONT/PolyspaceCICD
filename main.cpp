@@ -12,7 +12,7 @@
 int main(int argc, char const *argv[])
 {
 	short a = func_overflow(2);
-	func_BitShift();
+	func_BitShift(5);
 	func_IDP_test();
 	func_NTL();
 	func_SLR();
