@@ -1,6 +1,5 @@
 #include <iostream>
-#include "RedChecks.h"
-#include "OrangeChecks.h"
+#include "functions.h"
 
 struct abcd {
 	char a;
@@ -18,32 +17,32 @@ void func_BitShift(signed char x)
 {
 	x = 1;
 	x = x << 2;
-//	x = x << 20;
+	x = x << 20;
 }
 
-// void func_IDP_test() {
+void func_IDP_test() {
 
-// 	int* y;
-// 	int x;
-// 	int z;
+	int* y;
+	int x;
+	int z;
 	
-// 	abcd_struct.a = 1;
-// 	abcd_struct.b = 2;
-// 	abcd_struct.c = 3;
-// 	abcd_struct.d = 4;
+	abcd_struct.a = 1;
+	abcd_struct.b = 2;
+	abcd_struct.c = 3;
+	abcd_struct.d = 4;
 	
-// 	y = &abcd_struct.c;
+	y = &abcd_struct.c;
 	
-// 	z = y[0];
-// 	z = y[1];
-// 	z = y[2];
-//  	z = y[3];
+	z = y[0];
+	z = y[1];
+	z = y[2];
+ 	z = y[3];
 	
-// 	x = *y;
-// 	x = *y++;
-// 	x = *y++;
-// 	x = *++y;
-// }
+	x = *y;
+	x = *y++;
+	x = *y++;
+	x = *++y;
+}
 
 void func_NTL() {
 	for (int i = 0; i == abcd_struct.c; i + 2)
@@ -55,7 +54,7 @@ void func_NTL() {
 void func_SLR() {
 	
 	int x = 1;
-//	printf(x);
+	printf(x);
 }
 
 int func_RNI(int x) {
@@ -66,3 +65,4 @@ void func_DBZ(int x) {
 	int y = 0;
 	x = x/y;
 }
+

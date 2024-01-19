@@ -1,5 +1,5 @@
-#ifndef RED_H
-#define RED_H 
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H 
 
 short func_overflowRed(short x);
 void func_BitShift(signed char x);
