@@ -23,7 +23,7 @@ void func_BitShift(signed char x)
 
 void func_IDP_test() {
 
-	abcd* y;
+	int* y;
 	int x;
 	int z;
 	
@@ -32,12 +32,12 @@ void func_IDP_test() {
 	abcd_struct.c = 3;
 	abcd_struct.d = 4;
 	
-	y = &abcd_struct;
+	y = &abcd_struct.a;
 	
-//	z = y[0];
-//	z = y[1];
-//	z = y[2];
-// 	z = y[3];
+	z = y[0];
+	z = y[1];
+	z = y[2];
+ 	z = y[3];
 	
 	x = *y;
 	x = *y++;
