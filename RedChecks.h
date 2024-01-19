@@ -1,7 +1,7 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H 
+#ifndef RED_H
+#define RED_H 
 
-short func_overflow(short x);
+short func_overflow1(short x);
 void func_BitShift(signed char x);
 void func_IDP_test();
 void func_NTL();

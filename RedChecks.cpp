@@ -1,5 +1,6 @@
 #include <iostream>
-#include "functions.h"
+#include "RedChecks.h"
+#include "OrangeChecks.h"
 #include <stdio.h>
 
 struct abcd {
@@ -9,7 +10,7 @@ struct abcd {
 	int d;
 } abcd_struct;
 
-short func_overflow(short x){
+short func_overflow1(short x){
 	int y = 2^30;
 	return x + y;
 }
