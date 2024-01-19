@@ -34,9 +34,9 @@ void func_IDP_test() {
 	
 	y = &abcd_struct;
 	
-	z = y[0];
-	z = y[1];
-	z = y[2];
+//	z = y[0];
+//	z = y[1];
+//	z = y[2];
 // 	z = y[3];
 	
 	x = *y;
