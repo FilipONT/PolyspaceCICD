@@ -3,7 +3,8 @@
 #include "OrangeChecks.h"
 #include "RedChecks.h"
 
-void func_overflow2(int x) {
+short func_overflowOrange(int x) {
 	x = x + 123;
+	return x;
 }
 

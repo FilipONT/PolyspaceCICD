@@ -10,7 +10,7 @@ struct abcd {
 	int d;
 } abcd_struct;
 
-short func_overflow1(short x){
+short func_overflowRed(short x){
 	int y = 2^30;
 	return x + y;
 }
