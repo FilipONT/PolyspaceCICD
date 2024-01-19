@@ -1,4 +1,0 @@
-DesiredTemperature(C): 34
-DesiredLightLevel(lm): 1110
-Mode: manual
-

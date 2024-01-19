@@ -1,8 +1,0 @@
-Id: 0001
-Name: Air conditioner A
-MinValue: 10
-MaxValue: 40
-Temp: 34
-TempStep: 1
-IsOn: 1
-IsFanOn: 1

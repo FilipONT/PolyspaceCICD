@@ -1,0 +1,2 @@
+C:\Users\Filip\Desktop\TestSMCA\Debug\PolyspaceDemo.exe
+C:\Users\Filip\Documents\Materiały Polyspace\Przykładowe projekty do analizy\SHCA Code Prover - All checks\Debug\PolyspaceDemo.exe

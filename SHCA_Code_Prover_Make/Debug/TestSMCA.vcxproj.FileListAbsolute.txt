@@ -1,2 +1,0 @@
-C:\Users\Filip\source\repos\TestSMCA\Debug\TestSMCA.exe
-C:\Users\Filip\Desktop\TestSMCA\Debug\TestSMCA.exe
