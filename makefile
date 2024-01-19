@@ -60,7 +60,7 @@
 # be PHONY. This typically includes all, install, clean, check. etc.
 # ---------------------------------------------------------------------------
 
-CXX        = visual16.x
+CXX        = g++
 CXXFLAGS   = -g -c -Wall
 LDFLAGS    = -g
 LDLIBS     =
