@@ -1,0 +1,11 @@
+# Options file
+-prog pi_task_integrated
+-verif-version 1.0
+-author Filip
+-dos
+-checkers all
+-code-metrics
+-guidelines his
+-library none
+-check-subnormal allow
+
