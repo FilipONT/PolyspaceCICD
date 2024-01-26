@@ -41,4 +41,5 @@ $(EXEC): $(obj)
 
 .PHONY: clean
 clean:
-	rm -f $(obj) $(EXEC) $(dep)
+	rm -f $(obj) $(dep)
+# $(EXEC)
