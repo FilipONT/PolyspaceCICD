@@ -6,7 +6,7 @@ int main(void)
     func_IDP_test();
     func_NTL();
     func_SLR();
-    func_RNI(rand());
+    int x = func_RNI(rand());
     func_DBZ(rand());
 
     return 0;
