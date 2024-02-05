@@ -15,7 +15,6 @@ struct abcd {
 } abcd_struct;
 
 void func_IDP_test() {
-
 	int* y;
 	int x;
 	int z;
