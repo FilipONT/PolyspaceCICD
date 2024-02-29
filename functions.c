@@ -38,7 +38,7 @@ void func_IDP_test() {
 }
 
 void func_NTL() {
-	for (int i = 0; i == abcd_struct.c; i + 2) /* polyspace Defect:INFINITE_LOOP [To fix:High] "Joł" */
+	for (int i = 0; i == abcd_struct.c; i + 2)
 	{
 		//code
 	}
@@ -55,10 +55,6 @@ int func_RNI(int x) {
 }
 
 void func_DBZ(int x) {
-	int y = 0;
+	int y = 1;
 	x = x / y;
-}
-
-int example_func(int in1) {
-	return 10*in1;
 }
