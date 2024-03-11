@@ -4,7 +4,7 @@ void func(signed char x)
 {
 	x = 1;
 	x = x << 2;
-	x = x << 21;
+	x = x << 3;
 }
 
 struct abcd {
@@ -57,4 +57,8 @@ int func_RNI(int x) {
 void func_DBZ(int x) {
 	int y = 1;
 	x = x / y;
+}
+
+int test_func(int x) {
+	return 10*x;
 }
